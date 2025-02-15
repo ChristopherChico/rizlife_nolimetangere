@@ -44,8 +44,8 @@ function loadKeyCharacters() {
         anchor.href = `images/Key-Characters/${image.src}`;
         anchor.setAttribute('data-featherlight', `
             <div style="text-align: center;">
-                <img src="images/Key-Characters/${image.src}" alt="Key Character ${image.description}" style="max-width: 100%; height: auto;">
-                <p>${image.description}</p>
+                <h2 id="h2-f" style="color: #fff">${image.description}</h2>
+                <img src="images/Key-Characters/${image.src}" alt="Key Character ${image.description}">
             </div>
         `);
 
@@ -71,8 +71,8 @@ function loadKeyLocations() {
         anchor.href = `images/Key-Location/${image.src}`;
         anchor.setAttribute('data-featherlight', `
             <div style="text-align: center;">
+                <h2 id="h2-f" style="color: #fff">${image.description}</h2>
                 <img src="images/Key-Location/${image.src}" alt="Key Location ${image.description}" style="max-width: 100%; height: auto;">
-                <p>${image.description}</p>
             </div>
         `);
 
@@ -98,8 +98,8 @@ function loadMultimedia() {
         anchor.href = `images/Multimedia/${image.src}`;
         anchor.setAttribute('data-featherlight', `
             <div style="text-align: center;">
+                <h2 id="h2-f" style="color: #fff">${image.description}</h2>
                 <img src="images/Multimedia/${image.src}" alt="Multimedia ${image.description}" style="max-width: 100%; height: auto;">
-                <p>${image.description}</p>
             </div>
         `);
 
@@ -146,3 +146,4 @@ window.addEventListener('click', event => {
         }
     });
 });
+

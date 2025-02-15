@@ -121,9 +121,9 @@
 }
 
 .featherlight {
-    display: flex; 
+    display: flex;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
     overflow: hidden !important;
     height: 100vh !important; 
 }
@@ -135,7 +135,8 @@
 
 .featherlight img {
     object-fit: contain;
-    height: 100vh !important;
+    height: 100vh !important; 
+    transform: scale(0.6);
 }
 
 .featherlight-next {
@@ -169,9 +170,20 @@
     margin-left: 50px !important;
 }
 
+#h2-f {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 70px;
+    margin-bottom: -170px;
+}
+
 .key-characters-heading.gallery {
     font-size: 30px;
     text-align: left;
     margin-left: 40px;
     margin-bottom: -10px;
 }
+
