@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <!--Page Title-->
-    <title>Namari - Free Landing Page Template</title>
+    <title>Noli Me Tángere</title>
 
     <!--Meta Keywords and Description-->
     <meta name="keywords" content="">
@@ -27,6 +27,9 @@
 
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!--Gallery CSS-->
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
 
@@ -79,13 +82,10 @@
                                 <a href="#about">Works Page</a>
                             </li>
                             <li>
+                                <a href="#services">Analysis</a>
+                            </li>
+                            <li>
                                 <a href="#gallery">Gallery</a>
-                            </li>
-                            <li>
-                                <a href="#services">Services</a>
-                            </li>
-                            <li>
-                                <a href="#testimonials">Testimonials</a>
                             </li>
                             <li>
                                 <a href="#clients">Clients</a>
@@ -178,161 +178,141 @@
     <!--Main Content Area-->
     <main id="content">
 
-   <!--Introduction-->
-<section id="about" class="introduction scrollto">
-    <div class="row clearfix">
-        <div class="col-3">
-            <div class="section-heading">
-                <h3>HISTORICAL CONTEXT</h3>
-                <h2 class="section-title">Noli Me Tangere by Dr. Jose Rizal</h2>
-                <p class="section-subtitle">
-                    Noli Me Tangere was written by Dr. Jose Rizal from 1884 to 1887 during the colonial rule of
-                    the Spanish in the Philippines. He created the novel to raise notice of the injustices after
-                    being motivated by the oppression that Filipinos endured at the hands of Spanish friars and
-                    government officials. The novel criticizes the lack of political representation, the exploitation
-                    of Filipinos, and the abuses of the Catholic Church. The novel played a key role in awakening
-                    the nationalism of the Filipinos and later heavily influenced the Philippine Revolution.
-                </p>
+        <!--Introduction-->
+        <section id="about" class="introduction scrollto">
+            <div class="row clearfix">
+                <div class="col-3">
+                    <div class="section-heading">
+                        <h3>HISTORICAL CONTEXT</h3>
+                        <h2 class="section-title">Noli Me Tangere by Dr. Jose Rizal</h2>
+                        <p class="section-subtitle">
+                            Noli Me Tangere was written by Dr. Jose Rizal from 1884 to 1887 during the colonial rule of
+                            the Spanish in the Philippines. He created the novel to raise notice of the injustices after
+                            being motivated by the oppression that Filipinos endured at the hands of Spanish friars and
+                            government officials. The novel criticizes the lack of political representation, the exploitation
+                            of Filipinos, and the abuses of the Catholic Church. The novel played a key role in awakening
+                            the nationalism of the Filipinos and later heavily influenced the Philippine Revolution.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-2-3">
+                    <!--Plot Summary Section-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="icon">
+                            <i class="fa fa-book fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>PLOT SUMMARY</h4>
+                            <p>
+                                Noli Me Tangere follows Juan Crisostomo Ibarra, a Filipino returning from Europe with dreams 
+                                of reforming his homeland. He discovers that his father, Don Rafael, was wrongfully accused, 
+                                imprisoned, and died due to the abuses of Spanish friars, especially Padre Damaso. Determined 
+                                to modernize society, he plans to build a school, but his efforts are sabotaged by corrupt 
+                                officials and the clergy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <i class="fa fa-heart fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>LOVE AND BETRAYAL</h4>
+                            <p>
+                                Ibarra's love for Maria Clara is manipulated by Padre Damaso, who reveals that he is her 
+                                biological father. Meanwhile, a man named Elias warns Ibarra of the continuing injustices 
+                                in the country, urging him to act against the corrupt system.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon">
+                            <i class="fa fa-gavel fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>ESCAPE AND TRAGEDY</h4>
+                            <p>
+                                Framed for rebellion, Ibarra is arrested and sentenced to death. With Elias' help, he escapes, 
+                                but Maria Clara, believing him dead, enters a convent. Elias, wounded from aiding Ibarra’s 
+                                escape, succumbs to his injuries, closing the novel with a tragic yet powerful ending.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--End of Introduction-->
+        <h2 class="key-characters-heading">KEY CHARACTERS</h2>
+
+        <div class="image-gallery-container">
+            <div class="image-card" onclick="openModal('Alferez', 'Alferez is a local military officer who represents the oppressive colonial authority. He is characterized by his arrogance and brutality, particularly towards the Filipino population. His interactions with the townspeople highlight the abuses of power and the tense relationship between the Spanish authorities and the Filipinos.')">
+                <img src="images/key/Alférez.jpg" alt="Alférez">
+                <p>Alférez</p>
+            </div>
+            <div class="image-card" onclick="openModal('Basilio', 'Basilio is a student and the son of Sisa. He symbolizes hope and the potential for change. After enduring hardships, including the loss of his family, he becomes a representative of the youth’s struggle for education and social justice. His character arc reflects the transition from innocence to awareness of societal injustices.')">
+                <img src="images/key/Basilio.png" alt="Basilio">
+                <p>Basilio</p>
+            </div>
+            <div class="image-card" onclick="openModal('Capitan Tiago', 'Capitan Tiago, also known as Don Santiago de los Santos, is a wealthy and influential Filipino who has a deep desire to gain favor with the Spanish authorities. He represents the Filipino bourgeoisie who often compromises their values for social status. His character illustrates the complexities of colonial identity and the moral dilemmas faced by those in power.')">
+                <img src="images/key/Capitán Tiago.jpg" alt="Capitán Tiago">
+                <p>Capitán Tiago</p>
+            </div>
+            <div class="image-card" onclick="openModal('Crispin', 'Crispin is Basilios younger brother, depicted as innocent and vulnerable. His tragic fate emphasizes the harsh realities faced by the poor under the colonial system, especially the exploitation of children. Crispin’s character serves as a critique of the church and the injustices embedded within society.')">
+                <img src="images/key/Crispin.png" alt="Crispin">
+                <p>Crispin</p>
+            </div>
+            <div class="image-card" onclick="openModal('Dona Victorina', 'Dona Victorina is a Filipino woman who aspires to be Spanish, often mocking her own heritage. Her character represents the colonial mentality and the desire for social acceptance among the colonizers. She embodies the absurdity of trying to gain status through superficial means and highlights the internalized oppression experienced by some Filipinos.')">
+                <img src="images/key/Doña Victorina.jpg" alt="Doña Victorina">
+                <p>Doña Victorina</p>
+            </div>
+            <div class="image-card" onclick="openModal('Elias', 'Elias is a revolutionary character who becomes a friend and ally to Ibarra. He represents the spirit of rebellion against colonial oppression and embodies the struggles of the Filipino people. Elias serves as a guide to Ibarra, helping him understand the realities of their society and the need for reform and revolution.')">
+                <img src="images/key/Elias.jpg" alt="Elias">
+                <p>Elias</p>
+            </div>
+            <div class="image-card" onclick="openModal('Juan Crisostomo Ibarra', 'Ibarra is the protagonist of the novel, a young mestizo returning to the Philippines after studying in Europe. He symbolizes the educated Filipino who seeks reform through peaceful means. His character reflects the conflict between ideals and reality, as he grapples with the corrupt systems in his homeland. His journey highlights the struggle for identity and social justice.')">
+                <img src="images/key/Juan Crisóstomo Ibarra.jpg" alt="Juan Crisóstomo Ibarra">
+                <p>Juan Crisóstomo Ibarra</p>
+            </div>
+            <div class="image-card" onclick="openModal('Maria Clara', 'Maria Clara is Ibarras love interest and represents the idealized Filipina woman. She embodies purity, beauty, and loyalty but also illustrates the limitations placed on women in society. Maria Clara’s character reflects the traditional roles of women and the impact of colonialism on Filipino identity.')">
+                <img src="images/key/María Clara.jpg" alt="María Clara">
+                <p>María Clara</p>
+            </div>
+            <div class="image-card" onclick="openModal('Padre Damaso', 'Padre Damaso is a Franciscan friar who serves as one of the primary antagonists in the novel. He embodies the corruption and moral decay of the clergy, representing the oppressive forces of the Church. His character is symbolic of the abuses of power perpetuated by religious authorities in colonial society.')">
+                <img src="images/key/Padre Dámaso.jpeg" alt="Padre Dámaso">
+                <p>Padre Dámaso</p>
+            </div>
+            <div class="image-card" onclick="openModal('Padre Salvi', 'Padre Salvi is another priest who represents the corrupt and hypocritical nature of the clergy. He is more sinister than Padre Damaso, as he harbors a secret obsession with Maria Clara. His character illustrates the moral failures of the Church and its detrimental influence on Filipino society.')">
+                <img src="images/key/Padre Salvi.jpg" alt="Padre Salvi">
+                <p>Padre Salvi</p>
+            </div>
+            <div class="image-card" onclick="openModal('Sisa', 'Sisa is the tragic mother of Basilio and Crispin. Her character portrays the pain and suffering of mothers in a society plagued by poverty and injustice. Sisa’s descent into madness reflects the devastating effects of colonial oppression on families and individuals, serving as a poignant critique of societal neglect.')">
+                <img src="images/key/Sisa.jpg" alt="Sisa">
+                <p>Sisa</p>
+            </div>
+            <div class="image-card" onclick="openModal('Dona Consolacion', 'Dona Consolacion is the wife of the Alferez and is portrayed as a bitter and spiteful woman who looks down on others. She reflects the arrogance and prejudice of those who align themselves with colonial power, showcasing how social hierarchies and personal insecurities manifest in cruelty towards others.')">
+                <img src="images/key/Tasya (Doña Consolación).png" alt="Tasya (Doña Consolación)">
+                <p>Tasya (Doña Consolación)</p>
+            </div>
+            <div class="image-card" onclick="openModal('Tiya Isabel', 'Tiya Isabel is a relative of Maria Clara and serves as a caretaker figure. She represents traditional Filipino values and familial loyalty. Her character highlights the importance of community and the influence of women in maintaining cultural identity amid colonial pressures.')">
+                <img src="images/key/Tiya Isabel.jpg" alt="Tiya Isabel">
+                <p>Tiya Isabel</p>
             </div>
         </div>
 
-        <div class="col-2-3">
-            <!--Plot Summary Section-->
-            <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                <div class="icon">
-                    <i class="fa fa-book fa-2x"></i>
-                </div>
-                <div class="icon-block-description">
-                    <h4>PLOT SUMMARY</h4>
-                    <p>
-                        Noli Me Tangere follows Juan Crisostomo Ibarra, a Filipino returning from Europe with dreams 
-                        of reforming his homeland. He discovers that his father, Don Rafael, was wrongfully accused, 
-                        imprisoned, and died due to the abuses of Spanish friars, especially Padre Damaso. Determined 
-                        to modernize society, he plans to build a school, but his efforts are sabotaged by corrupt 
-                        officials and the clergy.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
-                <div class="icon">
-                    <i class="fa fa-heart fa-2x"></i>
-                </div>
-                <div class="icon-block-description">
-                    <h4>LOVE AND BETRAYAL</h4>
-                    <p>
-                        Ibarra's love for Maria Clara is manipulated by Padre Damaso, who reveals that he is her 
-                        biological father. Meanwhile, a man named Elias warns Ibarra of the continuing injustices 
-                        in the country, urging him to act against the corrupt system.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
-                <div class="icon">
-                    <i class="fa fa-gavel fa-2x"></i>
-                </div>
-                <div class="icon-block-description">
-                    <h4>ESCAPE AND TRAGEDY</h4>
-                    <p>
-                        Framed for rebellion, Ibarra is arrested and sentenced to death. With Elias' help, he escapes, 
-                        but Maria Clara, believing him dead, enters a convent. Elias, wounded from aiding Ibarra’s 
-                        escape, succumbs to his injuries, closing the novel with a tragic yet powerful ending.
-                    </p>
-                </div>
+        <div id="modal-works" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
             </div>
         </div>
-    </div>
-</section>
-<!--End of Introduction-->
-<h2 class="key-characters-heading">KEY CHARACTERS</h2>
+        <!-- end doms -->
 
-<div class="image-gallery-container">
-    <div class="image-card" onclick="openModal('Alferez', 'Alferez is a local military officer who represents the oppressive colonial authority. He is characterized by his arrogance and brutality, particularly towards the Filipino population. His interactions with the townspeople highlight the abuses of power and the tense relationship between the Spanish authorities and the Filipinos.')">
-        <img src="images/key/Alférez.jpg" alt="Alférez">
-        <p>Alférez</p>
-    </div>
-    <div class="image-card" onclick="openModal('Basilio', 'Basilio is a student and the son of Sisa. He symbolizes hope and the potential for change. After enduring hardships, including the loss of his family, he becomes a representative of the youth’s struggle for education and social justice. His character arc reflects the transition from innocence to awareness of societal injustices.')">
-        <img src="images/key/Basilio.png" alt="Basilio">
-        <p>Basilio</p>
-    </div>
-    <div class="image-card" onclick="openModal('Capitan Tiago', 'Capitan Tiago, also known as Don Santiago de los Santos, is a wealthy and influential Filipino who has a deep desire to gain favor with the Spanish authorities. He represents the Filipino bourgeoisie who often compromises their values for social status. His character illustrates the complexities of colonial identity and the moral dilemmas faced by those in power.')">
-        <img src="images/key/Capitán Tiago.jpg" alt="Capitán Tiago">
-        <p>Capitán Tiago</p>
-    </div>
-    <div class="image-card" onclick="openModal('Crispin', 'Crispin is Basilios younger brother, depicted as innocent and vulnerable. His tragic fate emphasizes the harsh realities faced by the poor under the colonial system, especially the exploitation of children. Crispin’s character serves as a critique of the church and the injustices embedded within society.')">
-        <img src="images/key/Crispin.png" alt="Crispin">
-        <p>Crispin</p>
-    </div>
-    <div class="image-card" onclick="openModal('Dona Victorina', 'Dona Victorina is a Filipino woman who aspires to be Spanish, often mocking her own heritage. Her character represents the colonial mentality and the desire for social acceptance among the colonizers. She embodies the absurdity of trying to gain status through superficial means and highlights the internalized oppression experienced by some Filipinos.')">
-        <img src="images/key/Doña Victorina.jpg" alt="Doña Victorina">
-        <p>Doña Victorina</p>
-    </div>
-    <div class="image-card" onclick="openModal('Elias', 'Elias is a revolutionary character who becomes a friend and ally to Ibarra. He represents the spirit of rebellion against colonial oppression and embodies the struggles of the Filipino people. Elias serves as a guide to Ibarra, helping him understand the realities of their society and the need for reform and revolution.')">
-        <img src="images/key/Elias.jpg" alt="Elias">
-        <p>Elias</p>
-    </div>
-    <div class="image-card" onclick="openModal('Juan Crisostomo Ibarra', 'Ibarra is the protagonist of the novel, a young mestizo returning to the Philippines after studying in Europe. He symbolizes the educated Filipino who seeks reform through peaceful means. His character reflects the conflict between ideals and reality, as he grapples with the corrupt systems in his homeland. His journey highlights the struggle for identity and social justice.')">
-        <img src="images/key/Juan Crisóstomo Ibarra.jpg" alt="Juan Crisóstomo Ibarra">
-        <p>Juan Crisóstomo Ibarra</p>
-    </div>
-    <div class="image-card" onclick="openModal('Maria Clara', 'Maria Clara is Ibarras love interest and represents the idealized Filipina woman. She embodies purity, beauty, and loyalty but also illustrates the limitations placed on women in society. Maria Clara’s character reflects the traditional roles of women and the impact of colonialism on Filipino identity.')">
-        <img src="images/key/María Clara.jpg" alt="María Clara">
-        <p>María Clara</p>
-    </div>
-    <div class="image-card" onclick="openModal('Padre Damaso', 'Padre Damaso is a Franciscan friar who serves as one of the primary antagonists in the novel. He embodies the corruption and moral decay of the clergy, representing the oppressive forces of the Church. His character is symbolic of the abuses of power perpetuated by religious authorities in colonial society.')">
-        <img src="images/key/Padre Dámaso.jpeg" alt="Padre Dámaso">
-        <p>Padre Dámaso</p>
-    </div>
-    <div class="image-card" onclick="openModal('Padre Salvi', 'Padre Salvi is another priest who represents the corrupt and hypocritical nature of the clergy. He is more sinister than Padre Damaso, as he harbors a secret obsession with Maria Clara. His character illustrates the moral failures of the Church and its detrimental influence on Filipino society.')">
-        <img src="images/key/Padre Salvi.jpg" alt="Padre Salvi">
-        <p>Padre Salvi</p>
-    </div>
-    <div class="image-card" onclick="openModal('Sisa', 'Sisa is the tragic mother of Basilio and Crispin. Her character portrays the pain and suffering of mothers in a society plagued by poverty and injustice. Sisa’s descent into madness reflects the devastating effects of colonial oppression on families and individuals, serving as a poignant critique of societal neglect.')">
-        <img src="images/key/Sisa.jpg" alt="Sisa">
-        <p>Sisa</p>
-    </div>
-    <div class="image-card" onclick="openModal('Dona Consolacion', 'Dona Consolacion is the wife of the Alferez and is portrayed as a bitter and spiteful woman who looks down on others. She reflects the arrogance and prejudice of those who align themselves with colonial power, showcasing how social hierarchies and personal insecurities manifest in cruelty towards others.')">
-        <img src="images/key/Tasya (Doña Consolación).png" alt="Tasya (Doña Consolación)">
-        <p>Tasya (Doña Consolación)</p>
-    </div>
-    <div class="image-card" onclick="openModal('Tiya Isabel', 'Tiya Isabel is a relative of Maria Clara and serves as a caretaker figure. She represents traditional Filipino values and familial loyalty. Her character highlights the importance of community and the influence of women in maintaining cultural identity amid colonial pressures.')">
-        <img src="images/key/Tiya Isabel.jpg" alt="Tiya Isabel">
-        <p>Tiya Isabel</p>
-    </div>
-</div>
-
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modal-title"></h2>
-        <p id="modal-description"></p>
-    </div>
-</div>
-<!-- end doms -->
-
-        <!--Gallery-->
-        <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-                 data-featherlight-filter="a">
-
-                <a href="images/gallery-images/gallery-image-1.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.1s"><img src="images/gallery-images/gallery-image-1.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-2.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.3s"><img src="images/gallery-images/gallery-image-2.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-3.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.5s"><img src="images/gallery-images/gallery-image-3.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-4.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="1.1s"><img src="images/gallery-images/gallery-image-4.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-5.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.9s"><img src="images/gallery-images/gallery-image-5.jpg" alt="Landing Page"/></a>
-                <a href="images/gallery-images/gallery-image-6.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.7s"><img src="images/gallery-images/gallery-image-6.jpg" alt="Landing Page"/></a>
-
-        </aside>
-        <!--End of Gallery-->
-
-
-        <!--Content Section-->
+        <!--Analysis-->
         <div id="services" class="scrollto clearfix">
 
             <div class="row no-padding-bottom clearfix">
@@ -386,53 +366,102 @@
         </div>
         <!--End of Content Section-->
 
-        <!--Testimonials-->
-        <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
+        <!--Gallery-->
+        <div id="gallery" class="text-center scrollto">
+            <h2 class="key-characters-heading gallery">GALLERY</h2>
 
-            <div class="row clearfix">
+            <div class="gallery-buttons">
+                <button class="gallery-button" onclick="openGalleryModal('key-characters-modal')">
+                    <img src="images/Key-Characters/María Clara.jpg" alt="Key Characters">
+                    <span class="button-description">Maria Clara<br><br>View key characters from the story</span>
+                </button>
+                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                    <img src="images/Key-Location/San Diego.jpg" alt="Key Locations">
+                    <span class="button-description">San Diego (Fictional Town)<br><br>View key locations from the story</span>
+                </button>
+                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                    <img src="images/Multimedia/Noli Me Tangere Film.png" alt="Multimedia">
+                    <span class="button-description">Noli Me Tangere Film<br><br>View multimedia of the story</span>
+                </button>
 
-                <div class="section-heading">
-                    <h3>FEEDBACK</h3>
-                    <h2 class="section-title">What our customers are saying</h2>
-                </div>
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-1.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>John Doe - Happy Customer</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-2.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>Roslyn Doe - Happy Customer</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
-                <!--User Testimonial-->
-                <blockquote class="col-3 testimonial classic">
-                    <img src="images/user-images/user-3.jpg" alt="User"/>
-                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua</q>
-                    <footer>Thomas Doe - Happy Customer</footer>
-                </blockquote>
-                <!-- End of Testimonial-->
-
+                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                    <img src="images/Multimedia/Noli Me Tangere Podcast.png" alt="Multimedia">
+                    <span class="button-description">Noli Me Tangere Podcast<br><br>View multimedia of the story</span>
+                </button>
+                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                    <img src="images/Key-Location/Laguna de Bay.jpg" alt="Key Locations">
+                    <span class="button-description">Laguna de Bay<br><br>View key locations of the story</span>
+                </button>
             </div>
 
-        </aside>
-        <!--End of Testimonials-->
+            <div class="gallery-buttons">
+                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                    <img src="images/Key-Characters/Tasya (Doña Consolación).png" alt="Key Characters">
+                    <span class="button-description">Tasya (Doña Consolación)<br><br>View key characters from the story</span>
+                </button>
+                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                    <img src="images/Key-Location/The Convent and Church.jpg" alt="Key Locations">
+                    <span class="button-description">The Convent and Church<br><br>View key locations from the story</span>
+                </button>
+
+                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                    <img src="images/Multimedia/Noli Me Tangere 1993.png" alt="Key Characters">
+                    <span class="button-description">Noli Me Tangere 1993<br><br>View multimedia from the story</span>
+                </button>
+                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                    <img src="images/Key-Location/Paco Cemetery.jpg" alt="Key Locations">
+                    <span class="button-description">Paco Cemetery<br><br>View key locations from the story</span>
+                </button>
+                <button class="gallery-button" onclick="openGalleryModal('key-characters-modal')">
+                    <img src="images/Key-Characters/Padre Salvi.jpg" alt="Key Characters">
+                    <span class="button-description">The Convent and Church<br><br>View key locations from the story</span>
+                </button>
+            </div>
+        
+            <!-- Modal for Key Characters -->
+            <aside data-featherlight-gallery data-featherlight-filter="a">
+                <div id="key-characters-modal" class="modal-g">
+                    <div class="modal-content-g">
+                        <span class="close" onclick="closeGalleryModal('key-characters-modal')">&times;</span>
+                        <h2 id="h2-g">Key Characters</h2>
+                        <div class="modal-gallery" id="modal-gallery">
+                            <!-- Dynamic images will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Modal for Key Locations -->
+            <aside data-featherlight-gallery data-featherlight-filter="a">
+                <div id="key-locations-modal" class="modal-g">
+                    <div class="modal-content-g">
+                        <span class="close" onclick="closeGalleryModal('key-locations-modal')">&times;</span>
+                        <h2 id="h2-g">Key Locations</h2>
+                        <div class="modal-gallery" id="key-locations-gallery">
+                            <!-- Dynamic images will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Modal for Multimedia -->
+            <aside data-featherlight-gallery data-featherlight-filter="a">
+                <div id="multimedia-modal" class="modal-g">
+                    <div class="modal-content-g">
+                        <span class="close" onclick="closeGalleryModal('multimedia-modal')">&times;</span>
+                        <h2 id="h2-g">Multimedia</h2>
+                        <div class="modal-gallery" id="multimedia-gallery">
+                            <!-- Dynamic images will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            </div>
+        </div>
+        <!--End of Gallery-->
 
         <!--Clients-->
-        <section id="clients" class="scrollto clearfix">
+        <section id="clients" class="scrollto">
             <div class="row clearfix">
 
                 <div class="col-3">
@@ -614,38 +643,47 @@
 
 </div>
 
-<!-- Include JavaScript resources -->
-<script src="js/jquery.1.8.3.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/featherlight.min.js"></script>
-<script src="js/featherlight.gallery.min.js"></script>
-<script src="js/jquery.enllax.min.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.stickyNavbar.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/images-loaded.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script src="js/site.js"></script>
-<script>
+    <!-- Include JavaScript resources -->
+    <script src="js/jquery.1.8.3.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/featherlight.min.js"></script>
+    <script src="js/featherlight.gallery.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.stickyNavbar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/images-loaded.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/site.js"></script>
+
+    <script src="js/gallery.js"></script>
+
+    <script>
+
     // start dom
     function openModal(title, description) {
         document.getElementById('modal-title').innerText = title;
         document.getElementById('modal-description').innerText = description;
-        document.getElementById('modal').style.display = 'block';
+        document.getElementById('modal-works').style.display = 'block';
+        document.body.style.overflow = 'hidden';
     }
     
     function closeModal() {
-        document.getElementById('modal').style.display = 'none';
+        document.getElementById('modal-works').style.display = 'none';
+        document.body.style.overflow = 'auto';
     }
     
     window.onclick = function(event) {
-        const modal = document.getElementById('modal');
+        const modal = document.getElementById('modal-works');
         if (event.target == modal) {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     }
     </script>
+
+
     
 
 </body>

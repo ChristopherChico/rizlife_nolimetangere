@@ -1468,6 +1468,7 @@ blockquote {
 /* --------- 6.6 Clients ---------- */
 
 #clients a {
+    margin-top: 60px; 
     display: block;
     text-align: center;
     position: relative;
