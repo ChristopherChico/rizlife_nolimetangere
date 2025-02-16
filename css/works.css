@@ -1,0 +1,28 @@
+#modal-works {
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0; 
+    transition: opacity 0.3s ease-out;
+    backdrop-filter: blur(5px);
+}
+
+
+#modal-works .modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    padding: 20px;
+    width: 80%;
+    transform: scale(0.9); 
+    opacity: 0; 
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#modal-works.open {
+    opacity: 1; 
+}
+
+#modal-works.open .modal-content {
+    transform: scale(1); 
+    opacity: 1;
+}

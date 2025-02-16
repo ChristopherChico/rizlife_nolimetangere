@@ -8,7 +8,7 @@ const keyCharacters = [
     { src: 'Elias.jpg', description: 'Elias' },
     { src: 'Juan Crisóstomo Ibarra.jpg', description: 'Juan Crisóstomo Ibarra' },
     { src: 'María Clara.jpg', description: 'María Clara' },
-    { src: 'María Clara2.jpg', description: 'María Clara2' },
+    { src: 'María Clara2.jpg', description: 'María Clara' },
     { src: 'Padre Dámaso.jpeg', description: 'Padre Dámaso' },
     { src: 'Padre Salvi.jpg', description: 'Padre Salvi' },
     { src: 'Sisa.jpg', description: 'Sisa' },
@@ -19,7 +19,7 @@ const keyCharacters = [
 // Array of image filenames and descriptions for Key Locations
 const keyLocations = [
     { src: 'Binondo.png', description: 'Binondo' },
-    { src: 'Escolta Street.jpg', description: 'Escolto Street.jpg' },
+    { src: 'Escolta Street.jpg', description: 'Escolto Street' },
     { src: 'Intramuros.jpg', description: 'Intramuros' },
     { src: 'Laguna de Bay.jpg', description: 'Laguna de Bay' },
     { src: 'Paco Cemetery.jpg', description: 'Paco Cemetery' },
@@ -124,26 +124,38 @@ loadMultimedia();
 
 // Add event listener to each button
 function openGalleryModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
     document.getElementById("banner").style.display = 'none';
     document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+        modal.classList.add('open');
+    }, 10); 
 }
 
 function closeGalleryModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
-    document.getElementById("banner").style.display = 'block';
-    document.body.style.overflow = 'auto';
+    const modal = document.getElementById(modalId);
+    modal.classList.remove('open'); 
+
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.getElementById("banner").style.display = 'block';
+        document.body.style.overflow = 'auto';
+    }, 300);
 }
 
-// Add event listener to the window to close the modal when clicked outside
 window.addEventListener('click', event => {
     const modals = document.querySelectorAll('.modal-g');
     modals.forEach(modal => {
         if (event.target == modal) {
-            modal.style.display = 'none';
-            document.getElementById("banner").style.display = 'block';
-            document.body.style.overflow = 'auto';
+            modal.classList.remove('open'); 
+
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.getElementById("banner").style.display = 'block';
+                document.body.style.overflow = 'auto';
+            }, 300); 
         }
     });
 });
-
