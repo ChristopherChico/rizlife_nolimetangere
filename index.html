@@ -668,6 +668,8 @@
 
         modal.style.display = 'block';
         document.body.classList.add('modal-open');
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = `8px`; 
 
         setTimeout(() => {
             modal.classList.add('open');
@@ -678,11 +680,14 @@
     function closeModal() {
         const modal = document.getElementById('modal-works');
         modal.classList.remove('open');
+        document.body.style.overflow = 'auto';
+        document.body.style.paddingRight = ``; 
 
         setTimeout(() => {
             modal.style.display = 'none';
             document.body.classList.remove('modal-open');
             document.getElementById("banner").style.display = 'block';
+    
         }, 300);
     }
 
@@ -690,6 +695,8 @@
         const modal = document.getElementById('modal-works');
         if (event.target == modal) {
             document.getElementById("banner").style.display = 'block';
+            document.body.style.overflow = 'auto';
+            document.body.style.paddingRight = ``; 
             closeModal();
         }
     };

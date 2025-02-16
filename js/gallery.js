@@ -127,21 +127,25 @@ function openGalleryModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.style.display = 'block';
     document.getElementById("banner").style.display = 'none';
-    document.body.classList.add('modal-open');
+    document.body.classList.add('modal-open'); 
 
     setTimeout(() => {
         modal.classList.add('open');
-    }, 10); 
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = `8px`; 
+    }, 10);
 }
 
 function closeGalleryModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.classList.remove('open'); 
+    document.body.style.overflow = 'auto';
+    document.body.style.paddingRight = '';
 
     setTimeout(() => {
         modal.style.display = 'none';
         document.getElementById("banner").style.display = 'block';
-        document.body.classList.remove('modal-open');
+        document.body.classList.remove('modal-open'); 
     }, 300); 
 }
 
@@ -149,12 +153,14 @@ window.addEventListener('click', event => {
     const modals = document.querySelectorAll('.modal-g');
     modals.forEach(modal => {
         if (event.target == modal) {
-            modal.classList.remove('open');
+            modal.classList.remove('open'); 
+            document.body.style.overflow = 'auto';
+            document.body.style.paddingRight = '';
 
             setTimeout(() => {
                 modal.style.display = 'none';
                 document.getElementById("banner").style.display = 'block';
-                document.body.classList.remove('modal-open');
+                document.body.classList.remove('modal-open'); 
             }, 300); 
         }
     });
