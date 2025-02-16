@@ -7,6 +7,33 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 
+body {
+  transition: 0.3s ease-out; 
+}
+
+body.modal-open {
+  overflow: hidden; 
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 6px;
+  transition: 0.3s ease-out;
+}
+
+body.modal-open::-webkit-scrollbar-thumb {
+  background: transparent;
+  transition: 0.3 ease-in;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

@@ -667,12 +667,12 @@
         modalDescription.innerText = description;
 
         modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('modal-open');
 
         setTimeout(() => {
             modal.classList.add('open');
             document.getElementById("banner").style.display = 'none';
-        }, 10); 
+        }, 10);
     }
 
     function closeModal() {
@@ -681,9 +681,9 @@
 
         setTimeout(() => {
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            document.body.classList.remove('modal-open');
             document.getElementById("banner").style.display = 'block';
-        }, 300); 
+        }, 300);
     }
 
     window.onclick = function(event) {

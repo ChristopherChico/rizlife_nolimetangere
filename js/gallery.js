@@ -127,7 +127,7 @@ function openGalleryModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.style.display = 'block';
     document.getElementById("banner").style.display = 'none';
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
 
     setTimeout(() => {
         modal.classList.add('open');
@@ -141,20 +141,20 @@ function closeGalleryModal(modalId) {
     setTimeout(() => {
         modal.style.display = 'none';
         document.getElementById("banner").style.display = 'block';
-        document.body.style.overflow = 'auto';
-    }, 300);
+        document.body.classList.remove('modal-open');
+    }, 300); 
 }
 
 window.addEventListener('click', event => {
     const modals = document.querySelectorAll('.modal-g');
     modals.forEach(modal => {
         if (event.target == modal) {
-            modal.classList.remove('open'); 
+            modal.classList.remove('open');
 
             setTimeout(() => {
                 modal.style.display = 'none';
                 document.getElementById("banner").style.display = 'block';
-                document.body.style.overflow = 'auto';
+                document.body.classList.remove('modal-open');
             }, 300); 
         }
     });
