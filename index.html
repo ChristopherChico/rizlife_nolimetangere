@@ -31,8 +31,14 @@
     <!--Gallery CSS-->
     <link rel="stylesheet" href="css/gallery.css">
 
+    <!--Analysis CSS-->
+    <link rel="stylesheet" href="css/analysis.css">
+
     <!--Works CSS-->
     <link rel="stylesheet" href="css/works.css">
+
+    <!--References CSS-->
+    <link rel="stylesheet" href="css/references.css">
 </head>
 <body>
 
@@ -78,16 +84,13 @@
                                 <a href="#about">Works</a>
                             </li>
                             <li>
-                                <a href="#services">Analysis</a>
+                                <a href="#analysis">Analysis</a>
                             </li>
                             <li>
                                 <a href="#gallery">Gallery</a>
                             </li>
                             <li>
                                 <a href="#clients">Clients</a>
-                            </li>
-                            <li>
-                                <a href="#pricing">Pricing</a>
                             </li>
                         </ul>
                     </nav>
@@ -195,10 +198,10 @@
                 <div class="col-2-3">
                     <!--Plot Summary Section-->
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="icon">
+                        <div class="icon" style="margin-top: 100px;">
                             <i class="fa fa-book fa-2x"></i>
                         </div>
-                        <div class="icon-block-description">
+                        <div class="icon-block-description">  
                             <h4>PLOT SUMMARY</h4>
                             <p>
                                 Noli Me Tangere follows Juan Crisostomo Ibarra, a Filipino returning from Europe with dreams 
@@ -309,290 +312,199 @@
         <!-- end doms -->
 
         <!--Analysis-->
-        <div id="services" class="scrollto clearfix">
+        <section id="analysis" class="text-center scrollto clearfix">
+            <div class="row clearfix">
 
-            <div class="row no-padding-bottom clearfix">
+                <h1 class="key-characters-heading analysis">Analysis</h3>
+                <h3 class="key-characters-heading sub">of Noli Me Tángere</h3>
 
-
-                <!--Content Left Side-->
-                <div class="col-3">
-                    <!--User Testimonial-->
-                    <blockquote class="testimonial text-right bigtest">
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore
-                            et dolore magna aliqua</q>
-                        <footer>— John Doe, Happy Customer</footer>
-                    </blockquote>
-                    <!-- End of Testimonial-->
-
-                </div>
-                <!--End Content Left Side-->
-
-                <!--Content of the Right Side-->
-                <div class="col-3">
-                    <div class="section-heading">
-                        <h3>BELIEVING</h3>
-                        <h2 class="section-title">Focusing On What Matters Most</h2>
-                        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="pricing-block-content">
+                        <h3>Relevance of Noli Me <br>Tángere Today</h3>
+                            <p id="read">Jose Rizal’s Noli Me Tángere remains relevant as it explores various social issues that are still happening in modern societies. Social injustice, for one, is still a dilemma being faced by societies, especially in the Philippines, in the form of extrajudicial killings and human rights violations...</p>
+                        <button class="readMore" data-section="socialIssues">Read More</button>
                     </div>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo.
-                    </p>
-                    <p>
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet!
-                    </p>
-                    <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
-                    <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
-                        WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
-                    </a>
                 </div>
-                <!--End Content Right Side-->
 
-                <div class="col-3">
-                    <img src="images/dancer.jpg" alt="Dancer"/>
+                <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="pricing-block-content">
+                        <h3>The Enduring Message of <br>Education, Social Reform, and <br>True Freedom</h3>
+                            <p id="read">Jose Rizal’s Noli Me Tangere delivers a powerful message about the role of education, social reform, and true freedom in creating a just society. Through emphasis on the injustices that the characters faced, it is clear that Rizal wanted to inform the readers that ignorance allows oppression to thrive and nothing is going to stop that but knowledge and reform.</p>
+                            <button class="readMore" data-section="politicalCorruption">Read More</button>
+                    </div>
+                </div>
+
+
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="pricing-block-content">
+                        <h3>Inspiring Critical Thinking and Social Action</h3>
+                            <p id="read">Noli Me Tangere not only reflects social issues of Rizal’s time but also encourages readers to engage in critical thinking and take social action. The novel invites readers to question systems of power and understand how these structures affect our society.</p>
+                            <button class="readMore" data-section="struggleForFreedom">Read More</button>
+                    </div>
                 </div>
 
             </div>
+        </section>
 
-
+        <div id="modalAnalysis" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeAnalysis">&times;</span>
+                <h3 id="modalTitle">Analysis</h3> 
+                <div id="dynamicContent"></div> 
+            </div>
         </div>
-        <!--End of Content Section-->
+        <!--End of Analysis Section-->
 
         <!--Gallery-->
-        <div id="gallery" class="text-center scrollto">
-            <h2 class="key-characters-heading gallery">GALLERY</h2>
+        <section id="gallery" class="text-center scrollto">
+            <div class="clearfix">
+                <h2 class="key-characters-heading gallery">GALLERY</h2>
 
-            <div class="gallery-buttons">
-                <button class="gallery-button" onclick="openGalleryModal('key-characters-modal')">
-                    <img src="images/Key-Characters/María Clara.jpg" alt="Key Characters">
-                    <span class="button-description">Maria Clara<br><br>View key characters from the story</span>
-                </button>
-                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                    <img src="images/Key-Location/San Diego.jpg" alt="Key Locations">
-                    <span class="button-description">San Diego (Fictional Town)<br><br>View key locations from the story</span>
-                </button>
-                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
-                    <img src="images/Multimedia/Noli Me Tangere Film.png" alt="Multimedia">
-                    <span class="button-description">Noli Me Tangere Film<br><br>View multimedia of the story</span>
-                </button>
+                <div class="gallery-buttons">
+                    <button class="gallery-button" onclick="openGalleryModal('key-characters-modal')">
+                        <img src="images/Key-Characters/María Clara.jpg" alt="Key Characters">
+                        <span class="button-description">Maria Clara<br><br>View key characters from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                        <img src="images/Key-Location/San Diego.jpg" alt="Key Locations">
+                        <span class="button-description">San Diego (Fictional Town)<br><br>View key locations from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                        <img src="images/Multimedia/Noli Me Tangere Film.png" alt="Multimedia">
+                        <span class="button-description">Noli Me Tangere Film<br><br>View multimedia of the story</span>
+                    </button>
 
-                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
-                    <img src="images/Multimedia/Noli Me Tangere Podcast.png" alt="Multimedia">
-                    <span class="button-description">Noli Me Tangere Podcast<br><br>View multimedia of the story</span>
-                </button>
-                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                    <img src="images/Key-Location/Laguna de Bay.jpg" alt="Key Locations">
-                    <span class="button-description">Laguna de Bay<br><br>View key locations of the story</span>
-                </button>
-            </div>
-
-            <div class="gallery-buttons">
-                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
-                    <img src="images/Key-Characters/Tasya (Doña Consolación).png" alt="Key Characters">
-                    <span class="button-description">Tasya (Doña Consolación)<br><br>View key characters from the story</span>
-                </button>
-                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                    <img src="images/Key-Location/The Convent and Church.jpg" alt="Key Locations">
-                    <span class="button-description">The Convent and Church<br><br>View key locations from the story</span>
-                </button>
-
-                <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
-                    <img src="images/Multimedia/Noli Me Tangere 1993.png" alt="Key Characters">
-                    <span class="button-description">Noli Me Tangere 1993<br><br>View multimedia from the story</span>
-                </button>
-                <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                    <img src="images/Key-Location/Paco Cemetery.jpg" alt="Key Locations">
-                    <span class="button-description">Paco Cemetery<br><br>View key locations from the story</span>
-                </button>
-                <button class="gallery-button" onclick="openGalleryModal('key-characters-modal')">
-                    <img src="images/Key-Characters/Padre Salvi.jpg" alt="Key Characters">
-                    <span class="button-description">Padre Salvi<br><br>View key characters from the story</span>
-                </button>
-            </div>
-        
-            <!-- Modal for Key Characters -->
-            <aside data-featherlight-gallery data-featherlight-filter="a">
-                <div id="key-characters-modal" class="modal-g">
-                    <div class="modal-content-g">
-                        <span class="close" onclick="closeGalleryModal('key-characters-modal')">&times;</span>
-                        <h2 id="h2-g">Key Characters</h2>
-                        <div class="modal-gallery" id="modal-gallery">
-                            <!-- Dynamic images will be inserted here -->
-                        </div>
-                    </div>
+                    <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                        <img src="images/Multimedia/Noli Me Tangere Podcast.png" alt="Multimedia">
+                        <span class="button-description">Noli Me Tangere Podcast<br><br>View multimedia of the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                        <img src="images/Key-Location/Laguna de Bay.jpg" alt="Key Locations">
+                        <span class="button-description">Laguna de Bay<br><br>View key locations of the story</span>
+                    </button>
                 </div>
-            </aside>
+
+                <div class="gallery-buttons">
+                    <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                        <img src="images/Key-Characters/Tasya (Doña Consolación).png" alt="Key Characters">
+                        <span class="button-description">Tasya (Doña Consolación)<br><br>View key characters from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                        <img src="images/Key-Location/The Convent and Church.jpg" alt="Key Locations">
+                        <span class="button-description">The Convent and Church<br><br>View key locations from the story</span>
+                    </button>
+
+                    <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
+                        <img src="images/Multimedia/Noli Me Tangere 1993.png" alt="Key Characters">
+                        <span class="button-description">Noli Me Tangere 1993<br><br>View multimedia from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
+                        <img src="images/Key-Location/Paco Cemetery.jpg" alt="Key Locations">
+                        <span class="button-description">Paco Cemetery<br><br>View key locations from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-characters-modal')">
+                        <img src="images/Key-Characters/Padre Salvi.jpg" alt="Key Characters">
+                        <span class="button-description">Padre Salvi<br><br>View key characters from the story</span>
+                    </button>
+                </div>
             
-            <!-- Modal for Key Locations -->
-            <aside data-featherlight-gallery data-featherlight-filter="a">
-                <div id="key-locations-modal" class="modal-g">
-                    <div class="modal-content-g">
-                        <span class="close" onclick="closeGalleryModal('key-locations-modal')">&times;</span>
-                        <h2 id="h2-g">Key Locations</h2>
-                        <div class="modal-gallery" id="key-locations-gallery">
-                            <!-- Dynamic images will be inserted here -->
+                <!-- Modal for Key Characters -->
+                <aside data-featherlight-gallery data-featherlight-filter="a">
+                    <div id="key-characters-modal" class="modal-g">
+                        <div class="modal-content-g">
+                            <span class="close" onclick="closeGalleryModal('key-characters-modal')">&times;</span>
+                            <h2 id="h2-g">Key Characters</h2>
+                            <div class="modal-gallery" id="modal-gallery">
+                                <!-- Dynamic images will be inserted here -->
+                            </div>
                         </div>
                     </div>
-                </div>
-            </aside>
-            
-            <!-- Modal for Multimedia -->
-            <aside data-featherlight-gallery data-featherlight-filter="a">
-                <div id="multimedia-modal" class="modal-g">
-                    <div class="modal-content-g">
-                        <span class="close" onclick="closeGalleryModal('multimedia-modal')">&times;</span>
-                        <h2 id="h2-g">Multimedia</h2>
-                        <div class="modal-gallery" id="multimedia-gallery">
-                            <!-- Dynamic images will be inserted here -->
+                </aside>
+                
+                <!-- Modal for Key Locations -->
+                <aside data-featherlight-gallery data-featherlight-filter="a">
+                    <div id="key-locations-modal" class="modal-g">
+                        <div class="modal-content-g">
+                            <span class="close" onclick="closeGalleryModal('key-locations-modal')">&times;</span>
+                            <h2 id="h2-g">Key Locations</h2>
+                            <div class="modal-gallery" id="key-locations-gallery">
+                                <!-- Dynamic images will be inserted here -->
+                            </div>
                         </div>
                     </div>
+                </aside>
+                
+                <!-- Modal for Multimedia -->
+                <aside data-featherlight-gallery data-featherlight-filter="a">
+                    <div id="multimedia-modal" class="modal-g">
+                        <div class="modal-content-g">
+                            <span class="close" onclick="closeGalleryModal('multimedia-modal')">&times;</span>
+                            <h2 id="h2-g">Multimedia</h2>
+                            <div class="modal-gallery" id="multimedia-gallery">
+                                <!-- Dynamic images will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </aside>
                 </div>
-            </aside>
             </div>
-        </div>
+        </section>
         <!--End of Gallery-->
 
-        <!--Clients-->
+        <!--Resources-->
         <section id="clients" class="scrollto">
             <div class="row clearfix">
 
                 <div class="col-3">
 
                     <div class="section-heading">
-                        <h3>TRUST</h3>
-                        <h2 class="section-title">Companies who use our services</h2>
-                        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+
+                        <h2 class="key-characters-heading r">Resources</h2>
+                        <p class="section-subtitle r">Here are the resources we used for the<br>making of this project.</p>
                     </div>
 
                 </div>
 
-                <div class="col-2-3">
+                <div class="col2-4">
 
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo1.png" alt="Company"/>
-                        <div class="client-overlay"><span>Tree</span></div>
+                    <a href="https://evnreport.com/columns/noli-me-tangere/" class="col-3" target="_blank">
+                        <img id="companyLogo" src="images/company-images/company-logo1.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Primary Source:<br>Paylan, S. (2024, March 25). Noli Me Tangere. EVN Report.</p></div>
                     </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo2.png" alt="Company"/>
-                        <div class="client-overlay"><span>Fingerprint</span></div>
+                    <a href="https://pinasculture.com/noli-me-tangere/#:~:text=Historical%20Context%20of%20Noli%20Me%20Tangere,-Jose%20Rizal’s%20novel&text=The%20novel%20highlighted%20the%20injustices,Filipinos%20seeking%20justice%20and%20independence" class="col-3" target="_blank">
+                        <img id="companyLogo" src="images/company-images/company-logo2.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Primary Source:<br>Pineda, A. (2024, May 7). Jose Rizal’s Noli Me Tangere: The novel that sparked a revolution. Pinas Culture.</p></div>
                     </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo3.png" alt="Company"/>
-                        <div class="client-overlay"><span>The Man</span></div>
+                    <a href="https://pinasculture.com/noli-me-tangere-summary/" class="col-3" target="_blank">
+                        <img id="companyLogo" src="images/company-images/company-logo8.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Primary Source:<br>Pineda, A. (2024, September 7). Noli me tangere brief summary. Pinas Culture.</p></div>
                     </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo4.png" alt="Company"/>
-                        <div class="client-overlay"><span>Mustache</span></div>
+                    <a href="https://www.penguinrandomhouse.com/books/291131/noli-me-tangere-touch-me-not-by-jose-rizal/9780143039693/readers-guide/" class="col-3" target="_blank">
+                        <img id="companyLogo" src="images/company-images/company-logo7.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Primary Source:<br>Francia, L. H. (n.d.). Noli Me Tangere (touch me not) by Jose Rizal - reading guide: 9780143039693 - penguinrandomhouse.com: Books. PenguinRandomhouse.com.</p></div>
                     </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo5.png" alt="Company"/>
-                        <div class="client-overlay"><span>Goat</span></div>
+                    <a href="https://cids.up.edu.ph/wp-content/uploads/2022/03/Corruption-in-the-Philippines-vol.5-no.1-Jan-June-2001-2.pdf" class="col-3" target="_blank">
+                        <img id="companyLogo" src="images/company-images/company-logo3.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Scholarly Article:<br>Barbo, L. B. (2001). Political culture of corruption in government. University of the Philippines Center for Integrative and Development Studies. Retrieved from</p></div>
                     </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo6.png" alt="Company"/>
-                        <div class="client-overlay"><span>Justice</span></div>
+                    <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-east-asia-and-the-pacific/philippines/report-philippines" class="col-3" target="_blank">
+                        <img id="companyLogo" src="images/company-images/company-logo4.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Scholarly Article:<br>Amnesty International. (n.d.). Human rights in Philippines.</p></div>
                     </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo7.png" alt="Company"/>
-                        <div class="client-overlay"><span>Ball</span></div>
+                    <a href="https://www.idea.int/democracytracker/country/philippines" class="col-3" target="_blank">
+                        <img id="companyLogo" id="companyLogo" src="images/company-images/company-logo5.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Scholarly Article:<br>Philippines | The global state of democracy. (n.d.). The Global State of Democracy.</p></div>
                     </a>
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo8.png" alt="Company"/>
-                        <div class="client-overlay"><span>Cold</span></div>
+                    <a href="https://www.rappler.com/newsbreak/in-depth/supreme-court-ruling-gives-activists-fighting-chance-red-tagging/" class="col-3" target="_blank">
+                        <img id="companyLogo" src="images/company-images/company-logo6.png" alt="Company"/>
+                        <div class="client-overlay"><p id="resources">Scholarly Article:<br>Bolledo, J. (2024, May 13). Not yet justice, but SC ruling gives activists fighting chance vs red-tagging. RAPPLER. </p></div>
                     </a>
-
-                    <a href="#" class="col-3">
-                        <img src="images/company-images/company-logo9.png" alt="Company"/>
-                        <div class="client-overlay"><span>Cold</span></div>
-                    </a>
-
+                    
                 </div>
 
             </div>
         </section>
-        <!--End of Clients-->
-
-        <!--Pricing Tables-->
-        <section id="pricing" class="secondary-color text-center scrollto clearfix ">
-            <div class="row clearfix">
-
-                <div class="section-heading">
-                    <h3>YOUR CHOICE</h3>
-                    <h2 class="section-title">We have the right package for you</h2>
-                </div>
-
-                <!--Pricing Block-->
-                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="pricing-block-content">
-                        <h3>Personal</h3>
-                        <p class="pricing-sub">The standard version</p>
-                        <div class="pricing">
-                            <div class="price"><span>$</span>19</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                        <ul>
-                            <li>5 Downloads</li>
-                            <li>2 Extensions</li>
-                            <li>Tutorials</li>
-                            <li>Forum Support</li>
-                            <li>1 year free updates</li>
-                        </ul>
-                        <a href="#" class="button">BUY TODAY</a>
-                    </div>
-                </div>
-                <!--End Pricing Block-->
-
-                <!--Pricing Block-->
-                <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="pricing-block-content">
-                        <h3>Student</h3>
-                        <p class="pricing-sub">Most popular choice</p>
-                        <div class="pricing">
-                            <div class="price"><span>$</span>29</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                        <ul>
-                            <li>15 Downloads</li>
-                            <li>5 Extensions</li>
-                            <li>Tutorials with Files</li>
-                            <li>Forum Support</li>
-                            <li>2 years free updates</li>
-                        </ul>
-                        <a href="#" class="button">BUY TODAY</a>
-                    </div>
-                </div>
-                <!--End Pricing Block-->
-
-                <!--Pricing Block-->
-                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="pricing-block-content">
-                        <h3>Business</h3>
-                        <p class="pricing-sub">For the whole team</p>
-                        <div class="pricing">
-                            <div class="price"><span>$</span>49</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                        <ul>
-                            <li>Unlimited Downloads</li>
-                            <li>Unlimited Extensions</li>
-                            <li>HD Video Tutorials</li>
-                            <li>Chat Support</li>
-                            <li>Lifetime free updates</li>
-                        </ul>
-                        <a href="#" class="button">BUY TODAY</a>
-                    </div>
-                </div>
-                <!--End Pricing Block-->
-
-            </div>
-        </section>
-        <!--End of Pricing Tables-->
+        <!--End of Resources-->
 
     </main>
     <!--End Main Content Area-->
@@ -601,38 +513,7 @@
     <!--Footer-->
     <footer id="landing-footer" class="clearfix">
         <div class="row clearfix">
-
-            <p id="copyright" class="col-2">Made with love by <a href="https://www.shapingrain.com">ShapingRain</a></p>
-
-            <!--Social Icons in Footer-->
-            <ul class="col-2 social-icons">
-                <li>
-                    <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
-                        <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" title="Google+" href="http://google.com/+username">
-                        <i class="fa fa-google-plus fa-1x"></i><span>Google+</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
-                        <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
-                        <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" title="behance" href="http://www.behance.net">
-                        <i class="fa fa-behance fa-1x"></i><span>Behance</span>
-                    </a>
-                </li>
-            </ul>
-            <!--End of Social Icons in Footer-->
+            <p id="copyright" class="col-2">Noli Me <a href="https://www.facebook.com/brylle.minas" target="_blank">Tángere</a></p>
         </div>
     </footer>
     <!--End of Footer-->
@@ -654,6 +535,7 @@
     <script src="js/site.js"></script>
 
     <script src="js/gallery.js"></script>
+    <script src="js/analysis.js"></script>
 
     <script>
 

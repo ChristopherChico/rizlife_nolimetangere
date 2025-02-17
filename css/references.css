@@ -1,0 +1,26 @@
+.key-characters-heading.r {
+    font-size: 30px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.key-characters-heading.r,
+.section-subtitle.r {
+    margin-right: 50px;
+}
+
+#resources {
+    text-align: center;  
+    vertical-align: middle;
+    display: table-cell;   
+}
+
+#companyLogo {
+    opacity: 0;
+}
+
+#link {
+    color: black;
+    text-align: center;  
+    vertical-align: middle;
+}

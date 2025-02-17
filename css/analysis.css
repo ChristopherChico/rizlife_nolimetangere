@@ -1,0 +1,34 @@
+.key-characters-heading.analysis {
+    font-size: 30px;
+}
+
+.key-characters-heading.sub {
+    color: fff;
+    margin-top: -50px;
+    margin-bottom: -20px;
+}
+
+#read {
+    text-align: start;
+}
+
+#modalAnalysis .modal {
+    text-align: left !important;
+    overflow: auto; /* Enable scrolling if content overflows */
+
+} 
+
+#modalAnalysis .modal-content {
+    text-align: left !important;
+    width: 50%;
+    margin: 2% auto;
+    max-height: 100vh;
+}
+
+
+#modalAnalysis .close:hover,
+#modalAnalysis .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
