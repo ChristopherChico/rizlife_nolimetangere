@@ -20,7 +20,6 @@ const keyCharacters = [
 const keyLocations = [
     { src: 'Binondo.png', description: 'Binondo' },
     { src: 'Escolta Street.jpg', description: 'Escolto Street' },
-    { src: 'Intramuros.jpg', description: 'Intramuros' },
     { src: 'Laguna de Bay.jpg', description: 'Laguna de Bay' },
     { src: 'Paco Cemetery.jpg', description: 'Paco Cemetery' },
     { src: 'San Diego.jpg', description: 'San Diego' },
