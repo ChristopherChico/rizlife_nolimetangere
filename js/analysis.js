@@ -29,44 +29,65 @@ const textData = {
     }
 };
 
-const readMoreButtons = document.querySelectorAll('.readMore');
-const modal = document.getElementById('modalAnalysis');
-const dynamicContent = document.getElementById('dynamicContent');
-const closeModalButton = document.getElementById('closeAnalysis');
-const modalTitle = document.getElementById('modalTitle');
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreButtons = document.querySelectorAll('.readMore');
+    const modal = document.getElementById('modalAnalysis');
+    const dynamicContent = document.getElementById('dynamicContent');
+    const closeModalButton = document.getElementById('closeAnalysis');
+    const modalTitle = document.getElementById('modalTitle');
 
-readMoreButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const section = button.getAttribute('data-section'); 
-        const sectionData = textData[section]; 
-
-
-        dynamicContent.innerHTML = '';
-        modalTitle.innerHTML = sectionData.title; // Set dynamic title
-
-        // Add new content
-        sectionData.content.forEach(text => {
-            const p = document.createElement('p');
-            p.innerHTML = text;
-            dynamicContent.appendChild(p);
-        });
-
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
         modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = `8px`; 
-    });
-});
+        document.getElementById("banner").style.display = 'none';
+        document.body.classList.add('modal-open');
 
-closeModalButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-    document.body.style.paddingRight = ``; 
-});
-
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        document.body.style.paddingRight = ``; 
+        setTimeout(() => {
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            document.body.style.paddingRight = '8px';
+        }, 10);
     }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('open');
+        document.body.style.overflow = 'auto';
+        document.body.style.paddingRight = '';
+
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.getElementById("banner").style.display = 'block';
+            document.body.classList.remove('modal-open');
+        }, 300);
+    }
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const section = button.getAttribute('data-section');
+            const sectionData = textData[section];
+
+            dynamicContent.innerHTML = '';
+            modalTitle.innerHTML = sectionData.title;
+
+            // Add new content
+            sectionData.content.forEach(text => {
+                const p = document.createElement('p');
+                p.innerHTML = text;
+                dynamicContent.appendChild(p);
+            });
+
+            openModal('modalAnalysis');
+        });
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        closeModal('modalAnalysis');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal('modalAnalysis');
+        }
+    });
 });

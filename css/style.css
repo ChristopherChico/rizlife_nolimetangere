@@ -84,14 +84,14 @@ figure {
 
 .page-border {
     position: fixed;
-    z-index: 999999;
+    z-index: 5;
     pointer-events: none;
 }
 
 .page-border .bottom-border, .page-border .left-border, .page-border .right-border, .page-border .top-border {
     background: #f3f3ef;
     position: fixed;
-    z-index: 9999;
+    z-index: 5;
 }
 
 .page-border > .top-border, .page-border > .right-border, .page-border > .bottom-border, .page-border > .left-border {
@@ -1126,7 +1126,7 @@ blockquote {
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 2147483647; /* z-index needs to be >= elements on the site. */
+        z-index: 1; /* z-index needs to be >= elements on the site. */
 
         /* position: centering content */
         text-align: center;
@@ -1467,21 +1467,27 @@ blockquote {
 
 /* --------- 6.6 Clients ---------- */
 
+#sectionR {
+    margin-left: -15px;
+}
+
 #clients a {
     margin-top: 60px; 
-    display: block;
     text-align: center;
     position: relative;
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
     transition: transform 0.3s ease-out;
+    margin-bottom: 200px;
 }
 
 #clients img {
     display: inline-block;
     padding: 15px 25px;
 }
+
+
 
 .client-overlay {
     color: #ffffff;
@@ -1492,10 +1498,10 @@ blockquote {
     bottom: 0;
     left: 0;
     display: table; 
-    width: 80%;
-    height: 90%;
     opacity: 0.4;
     padding: 20px;
+    height: 250px;
+    width: 300px;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -1622,6 +1628,7 @@ blockquote {
     right: 30px;
     width: 70px;
     height: 80px;
+    z-index: 1px !important; 
     margin-bottom: -10px;
     padding: 0 5px 20px 5px;
     text-align: center;
@@ -2207,8 +2214,30 @@ blockquote {
         padding:0;
     }
 
+    .pricing-block {
+        margin-bottom: 1px;
+    }
+
+    #sectionR {
+        margin-left: 5px;
+        margin-bottom: -30px;
+    }
+
+    .pricing-block-content {
+        border-color: #d2b356;
+    }
+
+    #companyLogo {
+        display: none;
+    }
+
+    #modalAnalysis .modal-content {
+        width: 100% !important; 
+    }
+
+
     .page-border, #scrollUp, #scrollUp:before {
-        display:none;
+        display: none;
     }
 
     .row {
@@ -2300,6 +2329,26 @@ blockquote {
         padding:0;
     }
 
+    .pricing-block {
+        margin-bottom: 100px;
+    }
+
+    .pricing-block-content {
+        border-color: #d2b356;
+    }
+
+    #sectionR {
+        margin-left: 5px;
+    }
+
+    #companyLogo {
+        display: none;
+    }
+
+    #modalAnalysis .modal-content {
+        width: 100% !important; 
+    }
+
     .page-border, #scrollUp, #scrollUp:before {
         display:none;
     }
@@ -2314,7 +2363,7 @@ blockquote {
     }
 
     .col-3, .col-4, .col-6, .col-8, .col-10, .col-12 {
-        width: 50%;
+        width: 45%;
     }
 
     /*-----------------Header Elements-----------------*/
@@ -2381,6 +2430,22 @@ blockquote {
         padding:0;
     }
 
+    .pricing-block {
+        margin-bottom: 10px;
+    }
+
+    .pricing-block-content {
+        border-color: #d2b356;
+    }
+
+    #sectionR {
+        margin-left: 5px;
+    }
+
+    .col-3 {
+        width: 50%;
+    }
+
     .page-border {
         display:none;
     }
@@ -2424,6 +2489,7 @@ blockquote {
     }
 
 }
+
 
 
 
