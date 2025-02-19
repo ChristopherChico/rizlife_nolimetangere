@@ -954,7 +954,7 @@ h6 {
     border-radius: 10px;
     width: 80%;
     max-height: 70vh;
-    overflow-y: auto;
+    overflow: auto;
     margin-top: 300px;
 }
 
