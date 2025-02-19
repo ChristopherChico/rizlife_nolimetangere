@@ -2337,6 +2337,11 @@ blockquote {
         border-color: #d2b356;
     }
 
+    #col2-4R {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #sectionR {
         margin-left: 5px;
     }
@@ -2423,7 +2428,7 @@ blockquote {
 
 /* Landscape Tablet to Desktop
 ===============================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1194px) {
 
     #wrapper {
         margin:0;
@@ -2437,13 +2442,9 @@ blockquote {
     .pricing-block-content {
         border-color: #d2b356;
     }
-
+    
     #sectionR {
         margin-left: 5px;
-    }
-
-    .col-3 {
-        width: 50%;
     }
 
     .page-border {
