@@ -60,6 +60,10 @@
     cursor: pointer;
 }
 
+#dynamicContent {
+    text-align: justify;
+}
+
 .readMore {
   appearance: none;
   background-color: #FAFBFC;
