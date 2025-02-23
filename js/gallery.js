@@ -35,6 +35,12 @@ const multimedia = [
     { src: 'Noli Me Tangere The Musical.jpg', description: 'Noli Me Tangere The Musical' }
 ];
 
+const youtubeVideos = [
+    { src: 'https://www.youtube.com/watch?v=3NwZtDmD0hY', description: 'Maria Clara at Ibarra | Official Trailer' },
+    { src: 'https://www.youtube.com/watch?v=3CNY8dkOzx8', description: 'Noli Me Tangere Opera' },
+    { src: 'https://www.youtube.com/watch?v=a1OfP5ju8bw', description: 'Original Manuscripts of<br>Noli me Tangere' }
+];
+
 // Function to load images dynamically into the Key Characters modal
 function loadKeyCharacters() {
     const modalGallery = document.getElementById('modal-gallery');
@@ -89,26 +95,74 @@ function loadKeyLocations() {
     });
 }
 
-// Function to load images dynamically into the Multimedia modal
+// Function to load images and YouTube videos dynamically into the Multimedia modal
 function loadMultimedia() {
     const modalGallery = document.getElementById('multimedia-gallery');
-    multimedia.forEach(image => {
+    multimedia.forEach(item => {
         const anchor = document.createElement('a');
-        anchor.href = `images/Multimedia/${image.src}`;
+        anchor.href = `images/Multimedia/${item.src}`;
+        
+        // Check if the item is a YouTube link
+        if (item.src.includes('youtube.com') || item.src.includes('youtu.be')) {
+            anchor.setAttribute('data-featherlight', `
+                <div style="text-align: center;">
+                    <h2 id="h2-f" style="color: #fff">${item.description}</h2>
+                    <iframe width="560" height="315" src="${item.src.replace('watch?v=', 'embed/')}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            `);
+        } else {
+            anchor.setAttribute('data-featherlight', `
+                <div style="text-align: center;">
+                    <h2 id="h2-f" style="color: #fff">${item.description}</h2>
+                    <img src="images/Multimedia/${item.src}" alt="Multimedia ${item.description}" style="max-width: 100%; height: auto;">
+                </div>
+            `);
+        }
+
+        const mediaElement = document.createElement(item.src.includes('youtube.com') || item.src.includes('youtu.be') ? 'iframe' : 'img');
+        if (mediaElement.tagName === 'IFRAME') {
+            mediaElement.src = item.src.replace('watch?v=', 'embed/');
+            mediaElement.width = '100%';
+            mediaElement.height = 'auto';
+            mediaElement.frameBorder = '0';
+            mediaElement.allowFullscreen = true;
+        } else {
+            mediaElement.src = `images/Multimedia/${item.src}`;
+        }
+        mediaElement.alt = `Multimedia ${item.description}`;
+        mediaElement.style.maxWidth = '100%';
+        mediaElement.style.height = 'auto';
+
+        const span = document.createElement('span');
+        span.className = 'image-description';
+        span.textContent = item.description;
+
+        anchor.appendChild(mediaElement);
+        anchor.appendChild(span);
+        modalGallery.appendChild(anchor);
+    });
+}
+
+// Function to load YouTube videos dynamically into the YouTube modal
+function loadYoutubeVideos() {
+    const modalGallery = document.getElementById('youtube-gallery');
+    youtubeVideos.forEach(video => {
+        const anchor = document.createElement('a');
+        anchor.href = video.src;
         anchor.setAttribute('data-featherlight', `
-            <div style="text-align: center;">
-                <h2 id="h2-f" style="color: #fff">${image.description}</h2>
-                <img src="images/Multimedia/${image.src}" alt="Multimedia ${image.description}" style="max-width: 100%; height: auto;">
+            <div class="featherlight-content">
+                <h2 id="h2-v" style="color: #fff">${video.description}</h2>
+                <iframe src="${video.src.replace('watch?v=', 'embed/')}" frameborder="0" allowfullscreen></iframe>
             </div>
         `);
 
         const img = document.createElement('img');
-        img.src = `images/Multimedia/${image.src}`;
-        img.alt = `Multimedia ${image.description}`;
+        img.src = `https://img.youtube.com/vi/${video.src.split('v=')[1]}/0.jpg`; // Thumbnail image
+        img.alt = `YouTube Video ${video.description}`;
 
         const span = document.createElement('span');
         span.className = 'image-description';
-        span.textContent = image.description;
+        span.innerHTML = video.description;
 
         anchor.appendChild(img);
         anchor.appendChild(span);
@@ -116,10 +170,12 @@ function loadMultimedia() {
     });
 }
 
-// Call the functions to load images
+
+// Call the functions to load images and videos
 loadKeyCharacters();
 loadKeyLocations();
 loadMultimedia();
+loadYoutubeVideos();
 
 // Add event listener to each button
 function openGalleryModal(modalId) {
@@ -164,3 +220,4 @@ window.addEventListener('click', event => {
         }
     });
 });
+

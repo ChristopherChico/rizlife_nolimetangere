@@ -195,10 +195,24 @@
     margin-bottom: -170px;
 }
 
+#h2-v {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+    font-size: 30px;
+}
+
 .key-characters-heading.gallery {
     font-size: 30px;
     text-align: left;
     margin-left: 45px;
     margin-bottom: -10px;
+}
+
+.featherlight-content iframe {
+    width: 100%; /* Set width to a percentage of the modal */
+    height: 600px;
+    border: none; /* Remove border */
 }
 
