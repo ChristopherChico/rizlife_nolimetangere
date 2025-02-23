@@ -2,15 +2,17 @@
     display: none;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
     opacity: 0; 
     transition: opacity 0.3s ease-out;
     backdrop-filter: blur(5px);
 }
 
-
 #modal-works .modal-content {
     background-color: #fefefe;
     border: 1px solid #888;
+    max-height: fit-content;
+    overflow: auto;
     padding: 20px;
     width: 80%;
     transform: scale(0.9); 
@@ -25,4 +27,13 @@
 #modal-works.open .modal-content {
     transform: scale(1); 
     opacity: 1;
+}
+
+#modal-works .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 1px;
+    margin-right: 10px !important;
 }
