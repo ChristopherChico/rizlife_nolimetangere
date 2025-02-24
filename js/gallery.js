@@ -32,14 +32,14 @@ const multimedia = [
     { src: 'Noli Me Tangere 1961.png', description: 'Noli Me Tangere 1961' },
     { src: 'Noli Me Tangere 1993.png', description: 'Noli Me Tangere 1993' },
     { src: 'Noli Me Tangere Film.png', description: 'Noli Me Tangere Film' },
-    { src: 'Noli Me Tangere Podcast.png', description: 'Noli Me Tangere Podcast' },
     { src: 'Noli Me Tangere The Musical.jpg', description: 'Noli Me Tangere The Musical' }
 ];
 
-const youtubeVideos = [
+const multimediaVA = [
     { src: 'https://www.youtube.com/watch?v=3NwZtDmD0hY', description: 'Maria Clara at Ibarra | Official Trailer' },
     { src: 'https://www.youtube.com/watch?v=3CNY8dkOzx8', description: 'Noli Me Tangere Opera' },
-    { src: 'https://www.youtube.com/watch?v=a1OfP5ju8bw', description: 'Original Manuscripts of<br>Noli me Tangere' }
+    { src: 'https://www.youtube.com/watch?v=a1OfP5ju8bw', description: 'Original Manuscripts of<br>Noli me Tangere' },
+    { src: 'https://open.spotify.com/embed/episode/1CG94YAKSw8AWbobHZkbEF?utm_source=generator', description: 'Noli Me Tangere Podcast' }
 ];
 
 // Function to load images dynamically into the Key Characters modal
@@ -145,21 +145,27 @@ function loadMultimedia() {
 }
 
 // Function to load YouTube videos dynamically into the YouTube modal
-function loadYoutubeVideos() {
-    const modalGallery = document.getElementById('youtube-gallery');
-    youtubeVideos.forEach(video => {
+function loadMultimediaVA() {
+    const modalGallery = document.getElementById('multimediaVA-gallery');
+    multimediaVA.forEach(video => {
         const anchor = document.createElement('a');
-        anchor.href = video.src;
         anchor.setAttribute('data-featherlight', `
             <div class="featherlight-content">
                 <h2 id="h2-v" style="color: #fff">${video.description}</h2>
-                <iframe src="${video.src.replace('watch?v=', 'embed/')}" frameborder="0" allowfullscreen></iframe>
+                ${video.src.includes('spotify.com') ? 
+                    `<iframe src="${video.src}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>` : 
+                    `<iframe src="${video.src.replace('watch?v=', 'embed/')}" frameborder="0" allowfullscreen></iframe>`}
             </div>
         `);
 
         const img = document.createElement('img');
-        img.src = `https://img.youtube.com/vi/${video.src.split('v=')[1]}/0.jpg`; // Thumbnail image
-        img.alt = `YouTube Video ${video.description}`;
+        if (video.src.includes('spotify.com')) {
+            img.src = 'images/Multimedia/Noli Me Tangere Podcast.png'; // Placeholder for Spotify
+            img.alt = `Spotify Audio ${video.description}`;
+        } else {
+            img.src = `https://img.youtube.com/vi/${video.src.split('v=')[1]}/0.jpg`; // Thumbnail image
+            img.alt = `YouTube Video ${video.description}`;
+        }
 
         const span = document.createElement('span');
         span.className = 'image-description';
@@ -171,12 +177,11 @@ function loadYoutubeVideos() {
     });
 }
 
-
 // Call the functions to load images and videos
 loadKeyCharacters();
 loadKeyLocations();
 loadMultimedia();
-loadYoutubeVideos();
+loadMultimediaVA();
 
 // Add event listener to each button
 function openGalleryModal(modalId, event) {
