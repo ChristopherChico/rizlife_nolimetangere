@@ -9,9 +9,10 @@ const keyCharacters = [
     { src: 'Juan Crisóstomo Ibarra.jpg', description: 'Juan Crisóstomo Ibarra' },
     { src: 'María Clara.jpg', description: 'María Clara' },
     { src: 'María Clara2.jpg', description: 'María Clara' },
-    { src: 'Padre Dámaso.jpeg', description: 'Padre Dámaso' },
+    { src: 'Padre Dámaso.jpg', description: 'Padre Dámaso' },
     { src: 'Padre Salvi.jpg', description: 'Padre Salvi' },
     { src: 'Sisa.jpg', description: 'Sisa' },
+    { src: 'Sisa2.jpg', description: 'Sisa' },
     { src: 'Tasya (Doña Consolación).png', description: 'Tasya (Doña Consolación)' },
     { src: 'Tiya Isabel.jpg', description: 'Tiya Isabel' }
 ];
