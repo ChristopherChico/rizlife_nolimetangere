@@ -2217,6 +2217,20 @@ blockquote {
         margin-bottom: 1px;
     }
 
+    .gallery-button img {
+        object-fit: fill;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .button-description {
+        display: block !important;
+        margin-left: 5%;
+        opacity: 1 !important;
+        transform: translateY(-10px) !important;
+        width: 90% !important;
+    }
+
     #sectionR {
         margin-left: 5px;
         margin-bottom: -30px;
@@ -2332,6 +2346,15 @@ blockquote {
         margin-bottom: 100px;
     }
 
+    .button-description {
+        display: block !important;
+        margin-left: 5%;
+        opacity: 1 !important;
+        transform: translateY(-10px) !important;
+        width: 90% !important;
+    }
+
+
     .pricing-block-content {
         border-color: #d2b356;
     }
@@ -2440,6 +2463,14 @@ blockquote {
 
     .pricing-block-content {
         border-color: #d2b356;
+    }
+
+    .button-description {
+        display: block !important;
+        margin-left: 5%;
+        opacity: 1 !important;
+        transform: translateY(-10px) !important;
+        width: 90% !important;
     }
     
     #sectionR {
