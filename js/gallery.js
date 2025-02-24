@@ -199,7 +199,7 @@ function openGalleryModal(modalId, event) {
 
     // taena diko alam ano meron pero eto nag ayos hahaha
     if (modalId === 'key-characters-modal') {
-        $.featherlight('images/Key-Characters/María Clara.jpg');
+        $.featherlight('');
     }
 }
 function closeGalleryModal(modalId) {
