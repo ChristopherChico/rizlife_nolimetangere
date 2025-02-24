@@ -179,19 +179,29 @@ loadMultimedia();
 loadYoutubeVideos();
 
 // Add event listener to each button
-function openGalleryModal(modalId) {
+function openGalleryModal(modalId, event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
     const modal = document.getElementById(modalId);
-    modal.style.display = 'block';
-    document.getElementById("banner").style.display = 'none';
-    document.body.classList.add('modal-open'); 
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.classList.add('modal-open');
+        document.getElementById("banner").style.display = 'none';
 
-    setTimeout(() => {
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = `8px`; 
-    }, 10);
+        setTimeout(() => {
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }, 10);
+    }
+
+    // taena diko alam ano meron pero eto nag ayos hahaha
+    if (modalId === 'key-characters-modal') {
+        $.featherlight('images/Key-Characters/María Clara.jpg');
+    }
 }
-
 function closeGalleryModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.classList.remove('open'); 

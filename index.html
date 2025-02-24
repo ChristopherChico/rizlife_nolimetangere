@@ -297,6 +297,7 @@
                 <p>Tiya Isabel</p>
             </div>
         </div>
+        
 
         <div id="modal-works" class="modal">
             <div class="modal-content">
@@ -354,50 +355,50 @@
         <!--Gallery-->
         <section id="gallery" class="text-center scrollto">
             <div class="clearfix">
-                    <h2 class="key-characters-heading gallery">GALLERY</h2>
-
-                    <div class="gallery-buttons">
-                        <button class="gallery-button" onclick="openGalleryModal('key-characters-modal')">
-                            <img src="images/Key-Characters/María Clara.jpg" alt="Key Characters">
-                            <span class="button-description">Maria Clara<br><br>View key characters from the story</span>
-                        </button>
-                        <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                            <img src="images/Key-Location/San Diego.jpg" alt="Key Locations">
-                            <span class="button-description">San Diego (Fictional Town)<br><br>View key locations from the story</span>
-                        </button>
-                        <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
-                            <img src="images/Multimedia/Noli Me Tangere Film.png" alt="Multimedia">
-                            <span class="button-description">Noli Me Tangere Film<br><br>View multimedia of the story</span>
-                        </button>
-
-                        <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
-                            <img src="images/Multimedia/Noli Me Tangere Podcast.png" alt="Multimedia">
-                            <span class="button-description">Noli Me Tangere Podcast<br><br>View multimedia of the story</span>
-                        </button>
-                        <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                            <img src="images/Key-Location/Laguna de Bay.jpg" alt="Key Locations">
-                            <span class="button-description">Laguna de Bay<br><br>View key locations of the story</span>
-                        </button>
-                    </div>
-
-                    <div class="gallery-buttons">
-                        <button class="gallery-button" onclick="openGalleryModal('multimedia-modal')">
-                            <img src="images/Key-Characters/Tasya (Doña Consolación).png" alt="Key Characters">
-                            <span class="button-description">Tasya (Doña Consolación)<br><br>View key characters from the story</span>
-                        </button>
-                        <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                            <img src="images/Key-Location/The Convent and Church.jpg" alt="Key Locations">
-                            <span class="button-description">The Convent and Church<br><br>View key locations from the story</span>
-                        </button>
-                        <button class="gallery-button" onclick="openGalleryModal('key-locations-modal')">
-                            <img src="images/Key-Location/Paco Cemetery.jpg" alt="Key Locations">
-                            <span class="button-description">Paco Cemetery<br><br>View key locations from the story</span>
-                        </button>
-                        <button class="gallery-button" onclick="openGalleryModal('youtube-modal')">
-                            <img src="images/Multimedia/Noli-Netflix.jpg" alt="Key Multimedia">
-                            <span class="button-description">Maria Clara at Ibarra | Official Trailer <br><br>View multimedia videos from the story</span>
-                        </button>
-                    </div>
+                <h2 class="key-characters-heading gallery">GALLERY</h2>
+        
+                <div class="gallery-buttons">
+                    <button class="gallery-button" onclick="openGalleryModal('key-characters-modal', event)">
+                        <img src="images/Key-Characters/María Clara.jpg" alt="Key Characters">
+                        <span class="button-description">Maria Clara<br><br>View key characters from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal', event)">
+                        <img src="images/Key-Location/San Diego.jpg" alt="Key Locations">
+                        <span class="button-description">San Diego (Fictional Town)<br><br>View key locations from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('multimedia-modal', event)">
+                        <img src="images/Multimedia/Noli Me Tangere Film.png" alt="Multimedia">
+                        <span class="button-description">Noli Me Tangere Film<br><br>View multimedia of the story</span>
+                    </button>
+        
+                    <button class="gallery-button" onclick="openGalleryModal('multimedia-modal', event)">
+                        <img src="images/Multimedia/Noli Me Tangere Podcast.png" alt="Multimedia">
+                        <span class="button-description">Noli Me Tangere Podcast<br><br>View multimedia of the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal', event)">
+                        <img src="images/Key-Location/Laguna de Bay.jpg" alt="Key Locations">
+                        <span class="button-description">Laguna de Bay<br><br>View key locations of the story</span>
+                    </button>
+                </div>
+        
+                <div class="gallery-buttons">
+                    <button class="gallery-button" onclick="openGalleryModal('multimedia-modal', event)">
+                        <img src="images/Key-Characters/Tasya (Doña Consolación).png" alt="Key Characters">
+                        <span class="button-description">Tasya (Doña Consolación)<br><br>View key characters from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal', event)">
+                        <img src="images/Key-Location/The Convent and Church.jpg" alt="Key Locations">
+                        <span class="button-description">The Convent and Church<br><br>View key locations from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('key-locations-modal', event)">
+                        <img src="images/Key-Location/Paco Cemetery.jpg" alt="Key Locations">
+                        <span class="button-description">Paco Cemetery<br><br>View key locations from the story</span>
+                    </button>
+                    <button class="gallery-button" onclick="openGalleryModal('youtube-modal', event)">
+                        <img src="images/Multimedia/Noli-Netflix.jpg" alt="Key Multimedia">
+                        <span class="button-description">Maria Clara at Ibarra | Official Trailer <br><br>View multimedia videos from the story</span>
+                    </button>
+                </div>
 
                 
                     <!-- Modal for Key Characters -->
@@ -546,24 +547,29 @@
     <script>
 
     // start dom
-    function openModal(title, description) {
-        const modal = document.getElementById('modal-works');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDescription = document.getElementById('modal-description');
-
-        modalTitle.innerText = title;
-        modalDescription.innerText = description;
-
-        modal.style.display = 'block';
-        document.body.classList.add('modal-open');
-        document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = `8px`; 
-
-        setTimeout(() => {
-            modal.classList.add('open');
-            document.getElementById("banner").style.display = 'none';
-        }, 10);
+    function openModal(title, description, event) {
+    if (event) {
+        event.stopPropagation(); 
+        event.preventDefault();  
     }
+
+    const modal = document.getElementById('modal-works');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+
+    modalTitle.innerText = title;
+    modalDescription.innerText = description;
+
+    modal.style.display = 'block';
+    document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+        modal.classList.add('open');
+        const banner = document.getElementById("banner");
+        if (banner) banner.style.display = 'none';
+    }, 10);
+}
 
     function closeModal() {
         const modal = document.getElementById('modal-works');
