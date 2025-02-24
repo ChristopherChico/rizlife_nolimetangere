@@ -670,8 +670,7 @@ nav#nav-mobile a:hover {
 }
 
 .social-icons a {
-    display: inline-block;
-    width: 32px;
+    width: 60px;
     text-align: center;
 }
 
@@ -1474,19 +1473,16 @@ blockquote {
     margin-top: 60px; 
     text-align: center;
     position: relative;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 15px;
     color: #fff;
     transition: transform 0.3s ease-out;
-    margin-bottom: 200px;
+    margin-bottom: 270px;
 }
 
 #clients img {
     display: inline-block;
     padding: 15px 25px;
 }
-
-
 
 .client-overlay {
     color: #ffffff;
@@ -1499,15 +1495,21 @@ blockquote {
     display: table; 
     opacity: 0.4;
     padding: 20px;
-    height: 250px;
+    height: 270px;
+    max-height: 270px;
+    min-height: 270px;
     width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    margin-top: 10px;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
-#clients a:hover .client-overlay {
+#clients a:hover .client-overlay,
+#clients a:hover #topR {
     opacity: 1;
 }
 
@@ -1601,6 +1603,7 @@ blockquote {
 
 #landing-footer {
     clear: both;
+    background-color: 333;
 }
 
 #landing-footer .row {
@@ -1619,6 +1622,7 @@ blockquote {
 #landing-footer li {
     display: inline-block;
 }
+
 
 /* Scroll Up */
 
@@ -2223,6 +2227,36 @@ blockquote {
         border-radius: 10px;
     }
 
+    #topR {
+        opacity: 1 !important;
+    }
+
+    #clients a {
+        margin-top: 90px;
+    }
+
+    #multimedia-modal .modal-content-g {
+        width: 90% !important;
+    }
+
+    #multimediaVA-modal .modal-content-g {
+        width: 95% !important;
+    }
+
+    #multimediaVA-gallery {
+        transform: scaleX(0.87);
+    }
+
+    #h2-v {
+        margin-top: 10%;
+    }
+
+    .featherlight-content iframe {
+        width: fit-content; /* Set width to a percentage of the modal */
+        height: 450px !important;
+        border: none; /* Remove border */
+    }
+
     .button-description {
         display: block !important;
         margin-left: 5%;
@@ -2233,7 +2267,7 @@ blockquote {
 
     #sectionR {
         margin-left: 5px;
-        margin-bottom: -30px;
+        margin-bottom: 50px;
     }
 
     .pricing-block-content {
@@ -2314,7 +2348,7 @@ blockquote {
 
     #landing-footer .social-icons {
         float: right;
-        width: 50%;
+        width: 100%;
     }
 
     /*-----------------Typography-----------------*/
@@ -2353,7 +2387,6 @@ blockquote {
         transform: translateY(-10px) !important;
         width: 90% !important;
     }
-
 
     .pricing-block-content {
         border-color: #d2b356;
@@ -2443,7 +2476,7 @@ blockquote {
 
     #landing-footer .social-icons {
         float: right;
-        width: 50%;
+        width: 100%;
     }
 
 }
@@ -2464,6 +2497,17 @@ blockquote {
     .pricing-block-content {
         border-color: #d2b356;
     }
+
+    #h2-v {
+        margin-top: 5%;
+    }
+
+    .featherlight-content iframe {
+        width: 550px !important; /* Set width to a percentage of the modal */
+        height: 80vh;
+        border: none; /* Remove border */
+    }
+
 
     .button-description {
         display: block !important;
